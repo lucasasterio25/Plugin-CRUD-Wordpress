@@ -1,0 +1,22 @@
+SMAP
+listaCliente_jsp.java
+JSP
+*S JSP
+*F
++ 0 listaCliente.jsp
+jsp/Cliente/listaCliente.jsp
++ 1 materalizeWeb.inc
+jsp/Cliente/../../inc/materalizeWeb.inc
+*L
+5,6:52
+12,4:59
+15,3:63
+1#1,10:66
+17#0,13:75
+30:88,3
+31:91
+32,4:92,3
+36,2:104
+38:106,3
+39,5:109
+*E
