@@ -34,7 +34,6 @@ public class PedidoDAO {
         // seta os valores
         stmt.setInt(1,pedido.getValor());
         stmt.setString(2,pedido.getData());
-        stmt.setInt(3,pedido.getId_produto());
 
         // executa
         stmt.execute();
@@ -67,7 +66,6 @@ public class PedidoDAO {
             pedido.setCodigo_pedido(rs.getInt("Codigo do pedido"));
             pedido.setValor(rs.getInt("Valor"));
             pedido.setData(rs.getString("Data"));
-            pedido.setId_produto(rs.getInt("Id do produto"));
             // adiciona o contato à lista de contatos
         }
         
@@ -80,8 +78,7 @@ public class PedidoDAO {
         try (PreparedStatement stmt = c.prepareStatement(sql)) {
             stmt.setInt(1,adm.getValor());
             stmt.setString(2,adm.getData());
-            stmt.setInt(3,adm.getId_produto());
-            stmt.setInt(4,adm.getCodigo_pedido());
+            stmt.setInt(3,adm.getCodigo_pedido());
             
             // executa
             stmt.execute();
@@ -104,7 +101,6 @@ public class PedidoDAO {
             pedidos.setCodigo_pedido(rs.getInt("Codigo_pedido"));
             pedidos.setValor(rs.getInt("Valor"));
             pedidos.setData(rs.getString("Data"));
-            pedidos.setId_produto(rs.getInt("Id_produto"));
             // adiciona o contato à lista 
             pedido.add(pedidos);
         }
@@ -113,6 +109,27 @@ public class PedidoDAO {
         stmt.close();
         return pedido;
         
+    }
+    
+    
+    public Pedido busca2(Pedido pedido) throws SQLException{
+        String sql = "select * from pedido WHERE codigo_pedido = ?";
+        // prepared statement para inserção
+        PreparedStatement stmt = this.c.prepareStatement(sql);
+        // seta os valores
+        stmt.setInt(1,pedido.getCodigo_pedido());
+        // executa
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {      
+            // criando o objeto Contato
+            pedido.setValor(rs.getInt("Valor"));
+            pedido.setData(rs.getString("Data"));
+            // adiciona o contato à lista de contatos
+        }
+        
+        stmt.close();
+        return pedido;
     }
     
 }

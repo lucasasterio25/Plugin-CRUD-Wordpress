@@ -3,8 +3,8 @@ package org.apache.jsp.jsp.contacce;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import br.com.fatec.jdbc.modelo.Usuario;
-import br.com.fatec.jdbc.dao.UsuarioDAO;
+import br.com.fatec.jdbc.modelo.Adm;
+import br.com.fatec.jdbc.dao.AdmDAO;
 
 public final class menu_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -48,25 +48,27 @@ public final class menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
-      out.write('\n');
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
 
     String login = request.getParameter("LOGIN");
     String senha = request.getParameter("SENHA");
 
-    Usuario u1 = new Usuario();
-    Usuario u2 = new Usuario();
-
+    Adm u1 = new Adm();
     u1.setLogin(login);
     u1.setSenha(senha);
 
-    UsuarioDAO dao = new UsuarioDAO();
+    AdmDAO dao = new AdmDAO();
 
-    u2 = dao.validaLogin(u1);
-
+    boolean u2 = dao.validaLogin(u1);
+    
+  
     session.setAttribute("UsuarioLogado", u2);
-
+    
+    
       out.write("\n");
+      out.write("    \n");
       out.write("<html>\n");
       out.write("    ");
       out.write("<head>\r\n");
@@ -82,92 +84,36 @@ public final class menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>SISTEMA DE PIZZAS</title>\n");
       out.write("    <body>\n");
       out.write("        ");
- if (u2.getStatus() != null) { 
+ if (u2 = true) { 
       out.write("\n");
+      out.write("        \n");
       out.write("            <!-- Dropdown2 Trigger -->\n");
-      out.write("            <a class='dropdown-button btn' data-beloworigin=\"true\" href='#' data-activates='dropdown2'>Manter Contato</a>        \n");
-      out.write("            ");
- if (u2.getTipo().equals("ADM")) { 
-      out.write("\n");
-      out.write("                <!-- Dropdown2 Structure -->\n");
+      out.write("            <a class='dropdown-button btn' data-beloworigin=\"true\" href=\"../Adm/Menu.jsp\" data-activates='dropdown2'>Manter Administrador</a>          \n");
       out.write("                <ul id='dropdown2' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../contato/inseriContato.jsp\"> inseriContato </a> </li>\n");
-      out.write("                    <li><a href=\"../contato/listaContato.jsp\"> listaContato </a> </li>\n");
-      out.write("                    <li><a href=\"../contato/listaParametrosContatos.jsp\"> listaContatoParametro </a></li>\n");
+      out.write("  \n");
       out.write("                </ul>\n");
-      out.write("            ");
- } else { 
-      out.write("\n");
+      out.write("            \n");
+      out.write("             <a class='dropdown-button btn' data-beloworigin=\"true\" href=\"../Produto/Menu.jsp\" data-activates='dropdown2'>Manter Produto</a>          \n");
       out.write("                <ul id='dropdown2' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../contato/listaContato.jsp\"> listaContato </a> </li>\n");
-      out.write("                    <li><a href=\"../contato/listaParametrosContatos.jsp\"> listaContatoParametro </a></li>\n");
+      out.write("\n");
       out.write("                </ul>\n");
-      out.write("            ");
- } 
-      out.write("\n");
-      out.write("            <!-- Dropdown3 Trigger -->\n");
-      out.write("            <a class='dropdown-button btn' data-beloworigin=\"true\" href='#' data-activates='dropdown3'>Manter Empresa</a>        \n");
-      out.write("            ");
- if (u2.getTipo().equals("ADM")) { 
-      out.write("\n");
-      out.write("                <!-- Dropdown3 Structure -->\n");
-      out.write("                <ul id='dropdown3' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../empresa/inseriEmpresa.jsp\"> inseriEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../empresa/listaEmpresa.jsp\"> listaEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../empresa/listaParametrosEmpresa.jsp\"> listaEmpresaParametro </a> </li>\n");
+      out.write("             \n");
+      out.write("             <a class='dropdown-button btn' data-beloworigin=\"true\" href=\"../Cliente/Menu.jsp\" data-activates='dropdown2'>Manter Cliente</a>          \n");
+      out.write("                <ul id='dropdown2' class='dropdown-content'>\n");
+      out.write("  \n");
       out.write("                </ul>\n");
-      out.write("            ");
- } else { 
-      out.write("\n");
-      out.write("                <ul id='dropdown3' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../empresa/listaEmpresa.jsp\"> listaEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../empresa/listaParametrosEmpresa.jsp\"> listaEmpresaParametro </a> </li>\n");
+      out.write("             \n");
+      out.write("             <a class='dropdown-button btn' data-beloworigin=\"true\" href=\"../Pedido/Menu.jsp\" data-activates='dropdown2'>Manter Pedido</a>          \n");
+      out.write("                <ul id='dropdown2' class='dropdown-content'>\n");
       out.write("                </ul>\n");
-      out.write("            ");
- } 
-      out.write("\n");
-      out.write("            <!-- Dropdown4 Trigger -->\n");
-      out.write("            <a class='dropdown-button btn' data-beloworigin=\"true\" href='#' data-activates='dropdown4'>Manter Contato Empresa</a>        \n");
-      out.write("            ");
- if (u2.getTipo().equals("ADM")) { 
-      out.write("\n");
-      out.write("                <!-- Dropdown4 Structure -->\n");
-      out.write("                <ul id='dropdown4' class='dropdown-content'> \n");
-      out.write("                    <li><a href=\"../contemp/inseriContatoEmpresa.jsp\"> inseriContatoEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../contemp/listaContatoEmpresa.jsp\"> listaContatoEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../contemp/listaParametrosContatoEmpresa.jsp\"> listaContatoEmpresaParametro </a> </li>\n");
+      out.write("             \n");
+      out.write("             <a class='dropdown-button btn' data-beloworigin=\"true\" href=\"../Produto/buscaProduto.jsp\" data-activates='dropdown2'>Buscar nome de Produto</a>          \n");
+      out.write("                <ul id='dropdown2' class='dropdown-content'>\n");
       out.write("                </ul>\n");
-      out.write("            ");
- } else { 
-      out.write("\n");
-      out.write("                <ul id='dropdown4' class='dropdown-content'> \n");
-      out.write("                    <li><a href=\"../contemp/listaContatoEmpresa.jsp\"> listaContatoEmpresa </a> </li>\n");
-      out.write("                    <li><a href=\"../contemp/listaParametrosContatoEmpresa.jsp\"> listaContatoEmpresaParametro </a> </li>\n");
-      out.write("                </ul>        \n");
-      out.write("            ");
- } 
-      out.write("\n");
-      out.write("            <!-- Dropdown1 Trigger -->\n");
-      out.write("            <a class='dropdown-button btn' data-beloworigin=\"true\" href='#' data-activates='dropdown1'>Manter Controle de Acesso</a>        \n");
-      out.write("            ");
- if (u2.getTipo().equals("ADM")) { 
-      out.write("\n");
-      out.write("                <!-- Dropdown1 Structure -->\n");
-      out.write("                <ul id='dropdown1' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../usuario/inseriUsuario.jsp\"> inseriUsuario </a></li>\n");
-      out.write("                    <li><a href=\"../usuario/listaUsuario.jsp\"> listaUsuario </a></li>\n");
-      out.write("                    <li><a href=\"../usuario/listaParametrosUsuarios.jsp\"> listaUsuarioParametro </a></li>\n");
-      out.write("                </ul>\n");
-      out.write("            ");
- } else { 
-      out.write("\n");
-      out.write("                <ul id='dropdown1' class='dropdown-content'>\n");
-      out.write("                    <li><a href=\"../usuario/listaUsuario.jsp\"> listaUsuario </a></li>\n");
-      out.write("                    <li><a href=\"../usuario/listaParametrosUsuarios.jsp\"> listaUsuarioParametro</a></li>\n");
-      out.write("                </ul>\n");
-      out.write("            ");
- } 
-      out.write("\n");
+      out.write("     \n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("        \n");
       out.write("        ");
  } else { 
       out.write("\n");
@@ -175,8 +121,12 @@ public final class menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ");
  } 
       out.write("\n");
+      out.write("        \n");
+      out.write("            \n");
+      out.write("      \n");
+      out.write("             \n");
       out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

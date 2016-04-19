@@ -53,27 +53,7 @@ public class AdmDAO {
         c.close();
     }
 
-    public Adm busca(Adm adm) throws SQLException{
-        String sql = "select * from adm WHERE login = ?";
-        // prepared statement para inserção
-        PreparedStatement stmt = this.c.prepareStatement(sql);
-        // seta os valores
-        stmt.setString(1,adm.getLogin());
-        // executa
-        ResultSet rs = stmt.executeQuery();
-
-        while (rs.next()) {      
-            // criando o objeto Contato
-            adm.setLogin(rs.getString("login"));
-            adm.setSenha(rs.getString("senha"));
-            adm.setEmail(rs.getString("email"));
-            adm.setEndereco(rs.getString("endereco"));
-            // adiciona o contato à lista de contatos
-        }
-        
-        stmt.close();
-        return adm;
-    }
+    
 
     
 public Adm altera(Adm adm) throws SQLException{
@@ -115,26 +95,47 @@ public Adm altera(Adm adm) throws SQLException{
         
     }
     
-    public Adm validaLogin(Adm usu) throws SQLException{
+    public boolean validaLogin(Adm usu) throws SQLException{
         String sql = "select * from adm WHERE login = ? AND senha = ?";
         // prepared statement para inserção
         PreparedStatement stmt = this.c.prepareStatement(sql);
+        
+        
+        
         // seta os valores
         stmt.setString(1,usu.getLogin());
         stmt.setString(2,usu.getSenha());
         // executa
         ResultSet rs = stmt.executeQuery();
-
-        while (rs.next()) {      
-            // criando o objeto Usuario
-            usu.setLogin(rs.getString(2));
-            usu.setSenha(rs.getString(3));
-            usu.setEndereco(rs.getString(4));
-            usu.setEmail(rs.getString(5));
-            // adiciona o usu à lista 
-        }
         
-        stmt.close();
-        return usu;
+        if (rs==null){
+        return false;
+        
+        }else{
+        return true;
+        }        
+        
+    }
+
+    public List<Adm> busca() throws SQLException{
+        
+        List<Adm> adm = new ArrayList<Adm>();
+        Adm adms = new Adm();
+        String sql = "select * from adm where login like ? '%' ";
+        try (PreparedStatement stmt = this.c.prepareStatement(sql)) {
+            stmt.setString(1,adms.getLogin());
+            // executa
+            ResultSet rs = stmt.executeQuery();
+            
+            while (rs.next()) {
+                
+                adms.setLogin(rs.getString("login"));
+                adms.setSenha(rs.getString("senha"));
+                adms.setEmail(rs.getString("email"));
+                adms.setEndereco(rs.getString("endereco"));
+                // adiciona o contato à lista de contatos
+            }
+        }
+        return adm;
     }
 }

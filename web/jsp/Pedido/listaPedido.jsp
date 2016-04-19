@@ -24,7 +24,7 @@
                   <th data-field="Codigo_pedido">Codigo_pedido</th>
                   <th data-field="Data">Data</th>
                   <th data-field="Valor">Valor</th>
-                  <th data-field="Id_produto">Id_produto</th>
+
               </tr>
             </thead>
             <tbody>
@@ -33,7 +33,7 @@
                         <td><%=us.getCodigo_pedido()%></td>
                         <td><%=us.getData()%></td>
                         <td><%=us.getValor()%></td>
-                        <td><%=us.getId_produto()%></td>
+
                        
                     </tr>
             <% } %>

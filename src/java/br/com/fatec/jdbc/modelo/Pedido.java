@@ -13,15 +13,7 @@ package br.com.fatec.jdbc.modelo;
 public class Pedido {
     private int valor;
     private String data;
-    private int id_produto, codigo_pedido;
-
-    public int getCodigo_pedido() {
-        return codigo_pedido;
-    }
-
-    public void setCodigo_pedido(int codigo_pedido) {
-        this.codigo_pedido = codigo_pedido;
-    }
+    private int  codigo_pedido;
 
     public int getValor() {
         return valor;
@@ -39,13 +31,12 @@ public class Pedido {
         this.data = data;
     }
 
-    public int getId_produto() {
-        return id_produto;
+    public int getCodigo_pedido() {
+        return codigo_pedido;
     }
 
-    public void setId_produto(int id_produto) {
-        this.id_produto = id_produto;
+    public void setCodigo_pedido(int codigo_pedido) {
+        this.codigo_pedido = codigo_pedido;
     }
-    
     
 }

@@ -16,7 +16,7 @@
             Codigo_pedido: <input type="text" name="CODIGO_PEDIDO" value="">  <br>
             Valor: <input type="text" name="VALOR" value="">  <br>
             Data: <input type="text" name="DATA" value="">  <br>
-            Id_produto: <input type="text" name="ID_PRODUTO" value="">  <br>  
+
             <input type="submit" name="Enviar" value="Enviar">  <br>
         </form>
     </body>

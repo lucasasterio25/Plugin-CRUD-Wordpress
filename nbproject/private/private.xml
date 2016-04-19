@@ -5,53 +5,47 @@
         <group>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/contacce/menu.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/ProdutoDAO.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/validainseriAdm.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/usuario/listaProdutos.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/css/materialize.css</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/listaProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/validaBuscaProduto.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/usuario/loginUsuario.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/alteraAdm.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/usuario/loginUsuario.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/validainseriCliente.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/usuario/menuUsuario.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/modelo/Adm.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/ConnectionFactory.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/inseriProduto.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TestaLista.java</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/modelo/Adm.java</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/ProdutospedidosDAO.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/validaAlteraCliente.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TestaLista.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TesteDeleta.java</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produtospedidos/listaProdutospedidos.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/listaAdm.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/alteraProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/validaExcluirCliente.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/ClienteDAO.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/alteraCliente.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/listaCliente.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/modelo/Pedido.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/excluirAdm.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/inseriAdm.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/modelo/Produtospedidos.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/css/materialize.min.css</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/PedidoDAO.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/Menu.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/contacce/index.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TesteBusca.java</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/validaAlteraAdm.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/inseriPedido.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/Menu.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/validaAlteraProduto.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/validaInseriProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Adm/validaExcluirAdm.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/validaExcluirProduto.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/inseriCliente.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/index.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/Menu.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/buscaProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/excluirPedido.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/buscaProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TesteAltera.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/alteraPedido.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TestaAdiciona.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/validaAlteraPedido.jsp</file>
-            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Produto/excluirProduto.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/validaInseriPedido.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Cliente/excluirCliente.jsp</file>
+            <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/testes/TesteLogin.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/src/java/br/com/fatec/jdbc/dao/AdmDAO.java</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/contacce/login.jsp</file>
             <file>file:/C:/Users/Lucas.Lucas/Downloads/Banco/web/jsp/Pedido/listaPedido.jsp</file>

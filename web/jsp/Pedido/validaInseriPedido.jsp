@@ -11,11 +11,11 @@
 <%
     String data = request.getParameter("DATA");
     String valor = request.getParameter("VALOR");
-    String id_produto = request.getParameter("ID_PRODUTO");
+
     Pedido u1 = new Pedido();
     u1.setData(data);
     u1.setValor(Integer.parseInt(valor));
-    u1.setId_produto(Integer.parseInt(id_produto));
+
     PedidoDAO dao = new PedidoDAO();
     dao.inseri(u1);
 %>
@@ -29,6 +29,6 @@
     <body>
         <h1>data : <%=data%></h1> <br>
         <h1>valor : <%=valor%></h1> <br>
-        <h1>id_produto : <%=id_produto%></h1> <br>
+
     </body>
 </html>

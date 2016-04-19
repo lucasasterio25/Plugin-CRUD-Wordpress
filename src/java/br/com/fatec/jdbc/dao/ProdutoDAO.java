@@ -53,51 +53,51 @@ public class ProdutoDAO {
     }
     
   
-    public List<Produto> busca(Produto produto) throws SQLException{
-         // clientes: array armazena a lista de registros
+     public Produto busca(Produto produto) throws SQLException{
 
-        PreparedStatement stmt = this.c.prepareStatement("select * from produto where nome like ?'%' ");
-        stmt.setString(1,"%"+produto.getNome()+"%");
+         String sql = "select * from produto where nome like ? '%' ";
+        // prepared statement para inserção
+        PreparedStatement stmt = this.c.prepareStatement(sql);
+        // seta os valores
+        stmt.setString(1,produto.getNome());
+        // executa
         ResultSet rs = stmt.executeQuery();
         
-        
-        List<Produto> produto1 = new ArrayList<Produto>();
         while (rs.next()) {      
-            // criando o objeto Cliente
-            Produto produtos = new Produto();
-            produtos.setCodigo(rs.getInt("Codigo"));
-            produtos.setNome(rs.getString("Nome"));
-            produtos.setPreco(rs.getString("Preco"));
- 
-            // adiciona o contato à lista 
-            produto1.add(produtos);
+            // criando o objeto Contato
+            produto.setCodigo(rs.getInt("Codigo"));
+            produto.setNome(rs.getString("Nome"));
+            produto.setPreco(rs.getString("Preco"));
+            // adiciona o contato à lista de contatos
         }
-        
         rs.close();
         stmt.close();
-        return produto1;
-        
-    }
-    
-    /*public Produto busca(Produto produto) throws SQLException{
-        String sql = "select * from produto WHERE nome = ?";
-        try (PreparedStatement stmt = this.c.prepareStatement(sql)) {
-            stmt.setString(1,produto.getNome());
-            // criando o objeto 
-            
-            ResultSet rs = stmt.executeQuery();
-            
-            while (rs.next()) {
-                // criando o objeto
-                Produto produtos = new Produto();
-                produtos.setCodigo(rs.getInt("Codigo"));
-                produtos.setNome(rs.getString("Nome"));
-                produtos.setPreco(rs.getString("Preco"));
-            }
-        }
-
         return produto;
-    } */
+  
+    }
+     
+   /* 
+     public Produto busca(Produto produto) throws SQLException{
+        String sql = "select * from produto where nome like ? '%' ";
+        // prepared statement para inserção
+        PreparedStatement stmt = this.c.prepareStatement(sql);
+        // seta os valores
+        stmt.setString(1,produto.getNome());
+        // executa
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {      
+            // criando o objeto Contato
+            produto.setCodigo(rs.getInt("Codigo"));
+            produto.setNome(rs.getString("Nome"));
+            produto.setPreco(rs.getString("Preco"));
+            // adiciona o contato à lista de contatos
+        }
+        
+        stmt.close();
+        return produto;
+    }
+     */
     
     public Produto altera(Produto adm) throws SQLException{
         String sql = "UPDATE produto SET nome = ?, preco = ? WHERE codigo = ?";
@@ -136,6 +136,28 @@ public class ProdutoDAO {
         stmt.close();
         return produto;
         
+    }
+    
+    public Produto busca2(Produto produto) throws SQLException{
+        String sql = "select * from produto WHERE codigo = ?";
+        // prepared statement 
+        
+        PreparedStatement stmt = this.c.prepareStatement(sql);
+        // seta os valores
+        stmt.setInt(1,produto.getCodigo());
+        // executa
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {      
+            // criando o objeto Contato
+            produto.setNome(rs.getString("Nome"));
+            produto.setPreco(rs.getString("Preco"));
+            
+            // adiciona o contato à lista de contatos
+        }
+        
+        stmt.close();
+        return produto;
     }
 
 

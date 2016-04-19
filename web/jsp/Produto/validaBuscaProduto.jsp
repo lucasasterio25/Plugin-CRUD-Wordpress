@@ -12,7 +12,7 @@
     Produto u1 = new Produto();
     u1.setNome(nome);
     ProdutoDAO dao = new ProdutoDAO();
-    List<Produto> adms = dao.busca(u1) ;
+    dao.busca(u1);
 %>
 
 <html>
@@ -29,13 +29,12 @@
               </tr>
             </thead>
             <tbody>
-            <% for (Produto us : adms) { %>
+
                     <tr>
-                        <td><%=us.getNome()%></td>
-                        <td><%=us.getPreco()%></td>
-                        <td><%=us.getCodigo()%></td>
+                        <td><%=u1.getNome()%></td>
+                        <td><%=u1.getPreco()%></td>
+                        <td><%=u1.getCodigo()%></td>
                     </tr>
-            <% } %>
             </tbody>
         </table>
     </body>

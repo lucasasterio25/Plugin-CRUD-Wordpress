@@ -20,21 +20,23 @@ public class TesteBusca {
     /**
      * @param args the command line arguments
      * @throws java.sql.SQLException
+     * @throws java.lang.ClassNotFoundException
      */
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        ProdutoDAO dao = new ProdutoDAO();
-        Produto c1 = new Produto();
-        c1.setNome("ovo");
-
         
-        List<Produto> adm = dao.busca(c1) ;
+        ProdutoDAO dao = new ProdutoDAO();
+        Produto p1 = new Produto();
 
-        for (Produto adms : adm) {
-            System.out.println("Nome: " + adms.getNome());
-            System.out.println("Preco: " + adms.getPreco());
-            System.out.println("Codigo: " + adms.getCodigo());
-            System.out.println("");
-        }   
+       
+        p1.setNome("o");
+        
+        dao.busca(p1);     
+       
+        System.out.println("Cdogigo Produto: " + p1.getCodigo());    
+        System.out.println("Nome Produto: " + p1.getNome());
+        System.out.println("Preco Produto: " + p1.getPreco() + " R$");
+        
+    
     }
 
 }

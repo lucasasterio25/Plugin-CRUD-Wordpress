@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <%
 
-    Adm usu = (Adm) session.getAttribute("UsuarioLogado");
     AdmDAO dao = new AdmDAO();
     List<Adm> adms = dao.lista() ;
     

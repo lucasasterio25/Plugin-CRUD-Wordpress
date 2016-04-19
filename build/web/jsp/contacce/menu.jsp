@@ -1,25 +1,28 @@
+
 <%@page import="br.com.fatec.jdbc.modelo.Adm" %>
 <%@page import="br.com.fatec.jdbc.dao.AdmDAO" %>
 <%
     String login = request.getParameter("LOGIN");
     String senha = request.getParameter("SENHA");
 
- 
-    Adm u2 = new Adm();
-
-    u2.setLogin(login);
-    u2.setSenha(senha);
+    Adm u1 = new Adm();
+    u1.setLogin(login);
+    u1.setSenha(senha);
 
     AdmDAO dao = new AdmDAO();
 
-    u2 = dao.validaLogin(u2);
-
-    session.setAttribute("AdmLogado", u2);
-%>
+    boolean u2 = dao.validaLogin(u1);
+    
+  
+    session.setAttribute("UsuarioLogado", u2);
+    
+    %>
+    
 <html>
     <%@include file="../../inc/materalizeWeb.inc" %>
     <title>SISTEMA DE PIZZAS</title>
     <body>
+        <% if (u2 = true) { %>
         
             <!-- Dropdown2 Trigger -->
             <a class='dropdown-button btn' data-beloworigin="true" href="../Adm/Menu.jsp" data-activates='dropdown2'>Manter Administrador</a>          
@@ -45,6 +48,19 @@
                 <ul id='dropdown2' class='dropdown-content'>
                 </ul>
              
+             <a class='dropdown-button btn' data-beloworigin="true" href="../Produtospedidos/listaProdutospedidos.jsp" data-activates='dropdown2'>Listar produtos pedidos</a>          
+                <ul id='dropdown2' class='dropdown-content'>
+                </ul>
+     
+        
+        
+        
+        <% } else { %>
+             <h1>USUÁRIO INVÁLIDO</h1>
+        <% } %>
+        
+            
+      
              
     </body>
 </html>

@@ -56,7 +56,6 @@ public final class listaAdm_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
 
 
-    Adm usu = (Adm) session.getAttribute("UsuarioLogado");
     AdmDAO dao = new AdmDAO();
     List<Adm> adms = dao.lista() ;
     
